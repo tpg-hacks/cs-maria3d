@@ -43,6 +43,18 @@
     }));
 
     imageryViewModels.push(new Cesium.ProviderViewModel({
+        name : 'Bing Aerial',
+        iconUrl : Cesium.buildModuleUrl('Widgets/Images/ImageryProviders/bingAerial.png'),
+        tooltip : 'http://www.bing.com/maps',
+        creationFunction : function() {
+            return new Cesium.BingMapsImageryProvider({
+                url : 'https://dev.virtualearth.net',
+                mapStyle : Cesium.BingMapsStyle.AERIAL
+            });
+        }
+    }));
+
+    imageryViewModels.push(new Cesium.ProviderViewModel({
         name : 'Flyfoto Norge',
         iconUrl : 'http://tpg-geostore:9008/mapcache/web/tilemapservice/getmaptile/fil_norway_4a660453-2d50-40a1-9ead-4f87c67ff9ed/7/67/37.jpg',
         tooltip : 'MARIA by Teleplan Globe AS',
