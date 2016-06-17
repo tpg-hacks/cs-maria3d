@@ -14,6 +14,7 @@ You need [Node.JS](http://nodejs.org).
 
 2. Install node dependencies
 
+        cd cs-maria3d
         npm install
 
 3. Run with electron:
